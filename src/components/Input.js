@@ -40,7 +40,7 @@ class Input extends Component {
         this.setState({
           data : data,
           temp :data.main.temp,
-          city :data.name +"," +data.sys.country,
+          city :data.name +" , " +data.sys.country,
           humid :data.main.humidity,
           desc :data.weather[0].description,
           error :data.cod,

@@ -8,19 +8,32 @@ class Result extends Component {
       console.log(this.props.error)
       if(this.props.error === 200){
         return (
-          <React.Fragment>
-            <div className="p-2">
-              Temperature : {this.props.temp} </div>
+          
 
-              <div className="p-2">
-              City : {this.props.city} </div>
+          <table className="table table-lg table-hover">
+  <tbody>
+    <tr>
+      <th scope="col p-2">Temperature</th>
+      <th scope="col p-2">{this.props.temp}</th>
+    </tr>
 
-              <div className="p-2">
-              Humidity : {this.props.humid} </div>
+    <tr>
+      <th scope="col">City</th>
+      <th scope="col">{this.props.city}</th>
+    </tr>
 
-              <div className="p-2">
-              Conditions : {this.props.desc} </div>
-          </React.Fragment>  
+    <tr>
+      <th scope="col">Humidity</th>
+      <th scope="col">{this.props.humid}</th>
+    </tr>
+
+    <tr>
+      <th scope="col">Conditions</th>
+      <th scope="col">{this.props.desc}</th>
+    </tr>
+
+    </tbody>
+        </table>
         )
       } else if(this.props.error === "404") {
           return(
